@@ -1,0 +1,41 @@
+<template name="btnclick" value="$button$.setOnClickListener(new View.OnClickListener() {&#10;    @Override&#10;    public void onClick(View v) {&#10;        $action$&#10;    }&#10;});" description="Set OnClick Listener to button" toReformat="false" toShortenFQNames="true">
+  <variable name="button" expression="" defaultValue="&quot;button&quot;" alwaysStopAt="true" />
+  <variable name="action" expression="" defaultValue="" alwaysStopAt="true" />
+  <context>
+    <option name="JAVA_DECLARATION" value="true" />
+    <option name="JAVA_STATEMENT" value="true" />
+  </context>
+</template>
+<template name="const" value="public static final " description="public static final" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="JAVA_DECLARATION" value="true" />
+    <option name="JAVA_STATEMENT" value="true" />
+  </context>
+</template>
+<template name="find" value="$Class$ $object$ = this.findViewById(R.id.$viewID$);" description="findViewById extended" toReformat="true" toShortenFQNames="true">
+  <variable name="Class" expression="" defaultValue="&quot;Class&quot;" alwaysStopAt="true" />
+  <variable name="object" expression="" defaultValue="&quot;object&quot;" alwaysStopAt="true" />
+  <variable name="viewID" expression="" defaultValue="&quot;viewID&quot;" alwaysStopAt="true" />
+  <context>
+    <option name="JAVA_DECLARATION" value="true" />
+    <option name="JAVA_STATEMENT" value="true" />
+  </context>
+</template>
+<template name="swact" value="Intent intent = new Intent($MainActivity$.this, $NextActivity$.class);&#10;intent.putExtra(&quot;$argStr$&quot;, &quot;$valStr$&quot;);&#10;$MainActivity$.this.startActivity(intent);" description="Call another activity from current activity" toReformat="true" toShortenFQNames="true">
+  <variable name="MainActivity" expression="className()" defaultValue="" alwaysStopAt="true" />
+  <variable name="NextActivity" expression="" defaultValue="&quot;NextActivity&quot;" alwaysStopAt="true" />
+  <variable name="argStr" expression="" defaultValue="&quot;argStr&quot;" alwaysStopAt="true" />
+  <variable name="valStr" expression="" defaultValue="&quot;valStr&quot;" alwaysStopAt="true" />
+  <context>
+    <option name="JAVA_DECLARATION" value="true" />
+    <option name="JAVA_STATEMENT" value="true" />
+  </context>
+</template>
+<template name="toast" value="Toast.makeText($MainActivity$.this, &quot;$content$&quot;, Toast.LENGTH_SHORT).show();" description="Make new toast" toReformat="true" toShortenFQNames="true">
+  <variable name="MainActivity" expression="className()" defaultValue="" alwaysStopAt="true" />
+  <variable name="content" expression="" defaultValue="&quot;content&quot;" alwaysStopAt="true" />
+  <context>
+    <option name="JAVA_DECLARATION" value="true" />
+    <option name="JAVA_STATEMENT" value="true" />
+  </context>
+</template>
