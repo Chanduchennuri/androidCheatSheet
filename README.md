@@ -28,7 +28,7 @@
 # Code snippet / Live Template
 ## Install template
 1. Copy all content of bluelulAndroid.xml to clipboard
-2. Press `Ctrl + Alt + S` in Android Studio to open Live Templates setting
+2. Open **File &rarr; Settings** (`Ctrl + Alt + S`) in Android Studio, then **Editor &rarr; Live Templates**
 3. Press `+` button on the right (or press `Alt + Insert`) and choose `Template Group`
 4. Input `AndroidBluelul` or any name you want
 5. Press `Ctrl + V` to add all copied templates to this group
