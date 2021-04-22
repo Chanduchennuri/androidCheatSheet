@@ -56,3 +56,7 @@
 ## Toast
 - `toast` : make new toast
 - *`toast.setGravity(Gravity.CENTER | Gravity.TOP, 0, 0)`* : change toast position
+
+## Snackbar
+- `snack` : make snackbar with button
+- `snacktext` : make new snackbar (for notification)

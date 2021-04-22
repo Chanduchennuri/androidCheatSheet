@@ -21,8 +21,24 @@
     <option name="JAVA_STATEMENT" value="true" />
   </context>
 </template>
+<template name="snacktext" value="View baseView = this.findViewById(android.R.id.content);&#10;Snackbar.make(baseView, &quot;$message$&quot;, Snackbar.LENGTH_LONG)&#10;        .show();" description="Make only-text snackbar" toReformat="true" toShortenFQNames="true">
+  <variable name="message" expression="" defaultValue="&quot;message&quot;" alwaysStopAt="true" />
+  <context>
+    <option name="JAVA_DECLARATION" value="true" />
+    <option name="JAVA_STATEMENT" value="true" />
+  </context>
+</template>
+<template name="snack" value="View baseView = this.findViewById(android.R.id.content);&#10;Snackbar.make(baseView, &quot;$message$&quot;, Snackbar.LENGTH_LONG)&#10;        .setAction(&quot;$btn$&quot;, vs -&gt; {&#10;            Snackbar.make(baseView, &quot;$btn_mes$&quot;, Snackbar.LENGTH_SHORT)&#10;                    .show();&#10;        })&#10;        .show();" description="Make  snackbar with button" toReformat="true" toShortenFQNames="true">
+  <variable name="message" expression="" defaultValue="&quot;snackbar message&quot;" alwaysStopAt="true" />
+  <variable name="btn" expression="" defaultValue="&quot;BTN&quot;" alwaysStopAt="true" />
+  <variable name="btn_mes" expression="" defaultValue="&quot;btn clicked&quot;" alwaysStopAt="true" />
+  <context>
+    <option name="JAVA_DECLARATION" value="true" />
+    <option name="JAVA_STATEMENT" value="true" />
+  </context>
+</template>
 <template name="swact" value="Intent intent = new Intent($MainActivity$.this, $NextActivity$.class);&#10;intent.putExtra(&quot;$argStr$&quot;, &quot;$valStr$&quot;);&#10;$MainActivity$.this.startActivity(intent);" description="Call another activity from current activity" toReformat="true" toShortenFQNames="true">
-  <variable name="MainActivity" expression="className()" defaultValue="" alwaysStopAt="true" />
+  <variable name="MainActivity" expression="className()" defaultValue="" alwaysStopAt="false" />
   <variable name="NextActivity" expression="" defaultValue="&quot;NextActivity&quot;" alwaysStopAt="true" />
   <variable name="argStr" expression="" defaultValue="&quot;argStr&quot;" alwaysStopAt="true" />
   <variable name="valStr" expression="" defaultValue="&quot;valStr&quot;" alwaysStopAt="true" />
@@ -32,7 +48,7 @@
   </context>
 </template>
 <template name="toast" value="Toast.makeText($MainActivity$.this, &quot;$content$&quot;, Toast.LENGTH_SHORT).show();" description="Make new toast" toReformat="true" toShortenFQNames="true">
-  <variable name="MainActivity" expression="className()" defaultValue="" alwaysStopAt="true" />
+  <variable name="MainActivity" expression="className()" defaultValue="" alwaysStopAt="false" />
   <variable name="content" expression="" defaultValue="&quot;content&quot;" alwaysStopAt="true" />
   <context>
     <option name="JAVA_DECLARATION" value="true" />
