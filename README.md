@@ -42,6 +42,7 @@
 ## Button
 - `find` : bind buttonID element in layout to a Button object
 - `btnclick` : set OnClick Listener to button object (non-lambda style)
+- `btnclickquick` : set OnClick Listener to button object (lambda style + non pre-declared)
 - *`button.setOnClickListener(v -> {})`* : set OnClick Listener to button object (lambda style)
 
 ## TextView

@@ -6,6 +6,14 @@
     <option name="JAVA_STATEMENT" value="true" />
   </context>
 </template>
+<template name="btnclickquick" value="this.findViewById(R.id.$button$).setOnClickListener(v -&gt; {&#10;    $action$&#10;});" description="Catch button click without declaration + use lambda" toReformat="true" toShortenFQNames="true">
+  <variable name="button" expression="" defaultValue="&quot;button&quot;" alwaysStopAt="true" />
+  <variable name="action" expression="" defaultValue="" alwaysStopAt="true" />
+  <context>
+    <option name="JAVA_DECLARATION" value="true" />
+    <option name="JAVA_STATEMENT" value="true" />
+  </context>
+</template>
 <template name="const" value="public static final " description="public static final" toReformat="false" toShortenFQNames="true">
   <context>
     <option name="JAVA_DECLARATION" value="true" />
