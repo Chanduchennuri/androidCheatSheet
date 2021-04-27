@@ -51,8 +51,7 @@
 
 ## Activity
 - `swact` : switch to another activity
-- *`Intent intent = getIntent()`* : get intent sent to activity, should put in onCreate() callback function
-- *`String val = intent.getStringExtra("arg")`* : parse argument from intent
+- `getintent` : load input argument of activity after being created
 
 ## Toast
 - `toast` : make new toast
