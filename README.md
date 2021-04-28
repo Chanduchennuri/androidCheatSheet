@@ -52,6 +52,8 @@
 ## Activity
 - `swact` : switch to another activity
 - `loadintent` : load input argument of activity after being created
+- *`overridePendingTransition(R.anim.trans_left_in, R.anim.trans_left_out)`* : swipe left to new activity, run after triggering activity
+- *`overridePendingTransition(R.anim.trans_right_in, R.anim.trans_right_out)`* : swipe right to previous activity, run after triggering activity
 
 ## Toast
 - `toast` : make new toast
