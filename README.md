@@ -51,7 +51,7 @@
 
 ## Activity
 - `swact` : switch to another activity
-- `getintent` : load input argument of activity after being created
+- `loadintent` : load input argument of activity after being created
 
 ## Toast
 - `toast` : make new toast
