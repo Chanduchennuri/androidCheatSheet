@@ -39,15 +39,29 @@
 - `loge` : log error
 - `logd` : log debug
 
+## Bind layout
+- `find` : bind XML component in layout to Java object
+- `findquick` : bind XML component in layout to Java object without declaring
+
 ## Button
-- `find` : bind buttonID element in layout to a Button object
 - `btnclick` : set OnClick Listener to button object (non-lambda style)
 - `btnclickquick` : set OnClick Listener to button object (lambda style + non pre-declared)
 - *`button.setOnClickListener(v -> {})`* : set OnClick Listener to button object (lambda style)
 
 ## TextView
-- `find` : bind textViewID element in layout to a TextView object
 - *`textView.setText(valueStr)`* : change content of TextView object
+
+## EditText
+- *`editText.setText(valueStr)`* : change content of TextView object
+- *`editText.length()`* : get text length
+- *`editText.setError("show error")`* : trigger error in EditText object
+- `textchangewatch` : handle text change
+
+## TextInputLayout
+- *`editText.setText(valueStr)`* : change content of TextView object
+- *`editText.length()`* : get text length
+- *`editText.setError("show error")`* : trigger error in EditText object
+- `textchangewatch` : handle text change
 
 ## Activity
 - `swact` : switch to another activity

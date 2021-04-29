@@ -29,6 +29,13 @@
     <option name="JAVA_STATEMENT" value="true" />
   </context>
 </template>
+<template name="findquick" value="findViewById(R.id.$viewID$)" description="findViewById without declaring new object" toReformat="true" toShortenFQNames="true">
+  <variable name="viewID" expression="" defaultValue="&quot;viewID&quot;" alwaysStopAt="true" />
+  <context>
+    <option name="JAVA_DECLARATION" value="true" />
+    <option name="JAVA_STATEMENT" value="true" />
+  </context>
+</template>
 <template name="loadintent" value="Intent intent = getIntent();&#10;String $val$ = intent.getStringExtra(&quot;$arg$&quot;);" description="Load input argument of activity after being created" toReformat="true" toShortenFQNames="true">
   <variable name="val" expression="" defaultValue="&quot;val&quot;" alwaysStopAt="true" />
   <variable name="arg" expression="" defaultValue="&quot;arg&quot;" alwaysStopAt="true" />
@@ -58,6 +65,16 @@
   <variable name="NextActivity" expression="" defaultValue="&quot;NextActivity&quot;" alwaysStopAt="true" />
   <variable name="argStr" expression="" defaultValue="&quot;argStr&quot;" alwaysStopAt="true" />
   <variable name="valStr" expression="" defaultValue="&quot;valStr&quot;" alwaysStopAt="true" />
+  <context>
+    <option name="JAVA_DECLARATION" value="true" />
+    <option name="JAVA_STATEMENT" value="true" />
+  </context>
+</template>
+<template name="textchangewatch" value="$editText$.addTextChangedListener(new TextWatcher() {&#10;    @Override&#10;    public void beforeTextChanged(CharSequence s, int start, int count, int after) {&#10;        $before$&#10;    }&#10;    &#10;    @Override&#10;    public void onTextChanged(CharSequence s, int start, int before, int count) {&#10;        $on$&#10;    }&#10;    &#10;    @Override&#10;    public void afterTextChanged(Editable s) {&#10;        $after$&#10;    }&#10;});" description="Handle EditText changes" toReformat="true" toShortenFQNames="true">
+  <variable name="editText" expression="" defaultValue="&quot;editText&quot;" alwaysStopAt="true" />
+  <variable name="before" expression="" defaultValue="" alwaysStopAt="true" />
+  <variable name="on" expression="" defaultValue="" alwaysStopAt="true" />
+  <variable name="after" expression="" defaultValue="" alwaysStopAt="true" />
   <context>
     <option name="JAVA_DECLARATION" value="true" />
     <option name="JAVA_STATEMENT" value="true" />
