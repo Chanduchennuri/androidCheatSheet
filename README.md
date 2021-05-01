@@ -55,13 +55,14 @@
 - *`editText.setText(valueStr)`* : change content of TextView object
 - *`editText.length()`* : get text length
 - *`editText.setError("show error")`* : trigger error in EditText object
-- `textchangewatch` : handle text change
+- `textchangewatch` : handle text change event
 
 ## TextInputLayout
 - *`editText.setText(valueStr)`* : change content of TextView object
 - *`editText.length()`* : get text length
-- *`editText.setError("show error")`* : trigger error in EditText object
-- `textchangewatch` : handle text change
+- *`editText.setError("show error")`* && *`editText.setErrorEnabled(true)`* : show error in TextInputLayout object
+- *`editText.setErrorEnabled(false)`* : hide error in TextInputLayout object
+- `textchangewatch` : handle text change event
 
 ## Activity
 - `swact` : switch to another activity
