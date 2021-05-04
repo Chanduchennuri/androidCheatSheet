@@ -77,3 +77,20 @@
 ## Snackbar
 - `snack` : make snackbar with button
 - `snacktext` : make new snackbar (for notification)
+
+<br>
+
+# Concept
+## Life Cycle of Activity
+**Create**  <br>
+|------------- finish data binding, allocate resources <br>
+*Start* <br>
+|------------- visible to user <br>
+**Resume** <br>
+|-------------------- running <br>
+*Pause* <br>
+|------------- transition to next activity <br>
+**Stop** <br>
+|------------- hiding: dive into actStack | on Recent App  <br>
+**Destroy** <br>
+|------------- free all resources: pop out of actStack <br>
