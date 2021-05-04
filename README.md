@@ -89,8 +89,8 @@
 **Resume** <br>
 |-------------------- running <br>
 *Pause* <br>
-|------------- transition to next activity <br>
+|------------- freezing: `transition to next activity` , `new app partially cover` <br>
 **Stop** <br>
-|------------- hiding: dive into actStack | on Recent App  <br>
+|------------- hiding: `dive into actStack` , `Recent App pressed` , `Home pressed`, `new app fully cover` <br>
 **Destroy** <br>
-|------------- free all resources: pop out of actStack <br>
+|------------- free all resources: `pop out of actStack` , `kill app` <br>
