@@ -56,19 +56,18 @@
 - *`editText.length()`* : get text length
 - *`editText.setError("show error")`* : trigger error in EditText object
 - `textchangewatch` : handle text change event
+- *`editText.addTextChangedListener(new RealNumberWatcher(editText))`* : automatically add thousand-separator for decimal-signed inputType EditText (java file found in /class folder)
 
 ## TextInputLayout
-- *`editText.setText(valueStr)`* : change content of TextView object
-- *`editText.length()`* : get text length
+Include all EditText's commands, and:
 - *`editText.setError("show error")`* && *`editText.setErrorEnabled(true)`* : show error in TextInputLayout object
 - *`editText.setErrorEnabled(false)`* : hide error in TextInputLayout object
-- `textchangewatch` : handle text change event
 
 ## Activity
 - `swact` : switch to another activity
 - `loadintent` : load input argument of activity after being created
-- *`overridePendingTransition(R.anim.trans_left_in, R.anim.trans_left_out)`* : swipe left to new activity, run after triggering activity
-- *`overridePendingTransition(R.anim.trans_right_in, R.anim.trans_right_out)`* : swipe right to previous activity, run after triggering activity
+- *`overridePendingTransition(R.anim.trans_left_in, R.anim.trans_left_out)`* : swipe left to new activity, run after triggering activity (files found in /anim folder)
+- *`overridePendingTransition(R.anim.trans_right_in, R.anim.trans_right_out)`* : swipe right to previous activity, run after triggering activity (files found in /anim folder)
 
 ## Toast
 - `toast` : make new toast
