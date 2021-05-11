@@ -91,6 +91,6 @@
 *Pause* <br>
 |------------- freezing: `transition to next activity` , `new app partially cover` <br>
 **Stop** <br>
-|------------- hiding: `dive into actStack` , `Recent App pressed` , `Home pressed`, `new app fully cover` <br>
+|------------- hiding: `dive into Back Stack` , `Recent App pressed` , `Home pressed`, `new app fully cover` <br>
 **Destroy** <br>
-|------------- free all resources: `pop out of actStack` , `kill app` <br>
+|------------- free all resources: `pop out of Back Stack` , `kill app` <br>
