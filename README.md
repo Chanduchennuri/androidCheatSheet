@@ -13,15 +13,18 @@
 4. Follow instruction to install Android Studio (`custom option` recommended)
 
 ## Note
-- If your computer supports GPU (especially NVIDIA), install driver for optimizing AVD (Android Virtual Device) perfomance.
+- If your computer supports GPU (especially NVIDIA), install GPU driver for optimizing AVD (Android Virtual Device) perfomance.
+```
+sudo ubuntu-drivers autoinstall
+```
+- Install 
 
 <br>
 
 # Customize
 ## Theme
 1. Open **File &rarr; Settings &rarr; Plugins** in Android Studio
-2. Install theme you want
-- Recommend: `One Dark Theme`, `Hiberbee Theme`, `Material Theme`
+2. Install theme you want. Recommend: `One Dark Theme`, `Hiberbee Theme`, `Material Theme`
 
 <br>
 
@@ -66,8 +69,8 @@ Include all EditText's commands, and:
 ## Activity
 - `swact` : switch to another activity
 - `loadintent` : load input argument of activity after being created
-- *`overridePendingTransition(R.anim.trans_left_in, R.anim.trans_left_out)`* : swipe left to new activity, run after triggering activity (files found in /anim folder)
-- *`overridePendingTransition(R.anim.trans_right_in, R.anim.trans_right_out)`* : swipe right to previous activity, run after triggering activity (files found in /anim folder)
+- *`overridePendingTransition(R.anim.trans_left_in, R.anim.trans_left_out)`* : swipe left to new activity, run after triggering activity
+- *`overridePendingTransition(R.anim.trans_right_in, R.anim.trans_right_out)`* : swipe right to previous activity, run after triggering activity
 
 ## Toast
 - `toast` : make new toast
