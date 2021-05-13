@@ -59,12 +59,13 @@ sudo ubuntu-drivers autoinstall
 - *`editText.length()`* : get text length
 - *`editText.setError("show error")`* : trigger error in EditText object
 - `textchangewatch` : handle text change event
-- *`editText.addTextChangedListener(new RealNumberWatcher(editText))`* : automatically add thousand-separator for decimal-signed inputType EditText (java file found in /class folder)
 
 ## TextInputLayout
-Include all EditText's commands, and:
+- *`editText.setText(valueStr)`* : change content of TextView object
+- *`editText.length()`* : get text length
 - *`editText.setError("show error")`* && *`editText.setErrorEnabled(true)`* : show error in TextInputLayout object
 - *`editText.setErrorEnabled(false)`* : hide error in TextInputLayout object
+- `textchangewatch` : handle text change event
 
 ## Activity
 - `swact` : switch to another activity
