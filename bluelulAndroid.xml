@@ -14,6 +14,14 @@
     <option name="JAVA_STATEMENT" value="true" />
   </context>
 </template>
+<template name="call" value="Intent intentCall = new Intent(Intent.ACTION_DIAL, Uri.parse(&quot;tel:&quot; + &quot;$phone$&quot;));&#10;if (intentCall.resolveActivity(getPackageManager()) != null) {&#10;    startActivity(intentCall);&#10;} else {&#10;    Toast.makeText(this, &quot;$error$&quot;&#10;            , Toast.LENGTH_SHORT).show();&#10;}" description="Make a call to a phone number" toReformat="true" toShortenFQNames="true">
+  <variable name="phone" expression="" defaultValue="&quot;0123456789&quot;" alwaysStopAt="true" />
+  <variable name="error" expression="" defaultValue="&quot;Phone call is not supported on this device&quot;" alwaysStopAt="true" />
+  <context>
+    <option name="JAVA_DECLARATION" value="true" />
+    <option name="JAVA_STATEMENT" value="true" />
+  </context>
+</template>
 <template name="const" value="public static final " description="public static final" toReformat="false" toShortenFQNames="true">
   <context>
     <option name="JAVA_DECLARATION" value="true" />
@@ -39,6 +47,15 @@
 <template name="loadintent" value="Intent intent = getIntent();&#10;String $val$ = intent.getStringExtra(&quot;$arg$&quot;);" description="Load input argument of activity after being created" toReformat="true" toShortenFQNames="true">
   <variable name="val" expression="" defaultValue="&quot;val&quot;" alwaysStopAt="true" />
   <variable name="arg" expression="" defaultValue="&quot;arg&quot;" alwaysStopAt="true" />
+  <context>
+    <option name="JAVA_DECLARATION" value="true" />
+    <option name="JAVA_STATEMENT" value="true" />
+  </context>
+</template>
+<template name="sms" value="Uri uri = Uri.parse(&quot;sms&quot; + &quot;to:&quot; + &quot;$phone$&quot;);&#10;Intent intentSms = new Intent(Intent.ACTION_SENDTO, uri);&#10;intentSms.putExtra(&quot;sms_body&quot;, &quot;$content$&quot;);&#10;if (intentSms.resolveActivity(getPackageManager()) != null) {&#10;    startActivity(intentSms);&#10;} else {&#10;    Toast.makeText(this, &quot;$error$&quot;&#10;            , Toast.LENGTH_SHORT).show();&#10;}" description="Compose SMS to a phone number" toReformat="true" toShortenFQNames="true">
+  <variable name="phone" expression="" defaultValue="&quot;0123456789&quot;" alwaysStopAt="true" />
+  <variable name="content" expression="" defaultValue="&quot;sms content&quot;" alwaysStopAt="true" />
+  <variable name="error" expression="" defaultValue="&quot;SMS texting is not supported on this device&quot;" alwaysStopAt="true" />
   <context>
     <option name="JAVA_DECLARATION" value="true" />
     <option name="JAVA_STATEMENT" value="true" />
@@ -81,6 +98,14 @@
 </template>
 <template name="toast" value="Toast.makeText(this, &quot;$content$&quot;, Toast.LENGTH_SHORT).show();" description="Make new toast" toReformat="true" toShortenFQNames="true">
   <variable name="content" expression="" defaultValue="&quot;content&quot;" alwaysStopAt="true" />
+  <context>
+    <option name="JAVA_DECLARATION" value="true" />
+    <option name="JAVA_STATEMENT" value="true" />
+  </context>
+</template>
+<template name="web" value="Intent intentWeb = new Intent(Intent.ACTION_VIEW, Uri.parse(&quot;$url$&quot;));&#10;if (intentWeb.resolveActivity(getPackageManager()) != null) {&#10;    startActivity(intentWeb);&#10;} else {&#10;    Toast.makeText(this, &quot;$error$&quot;&#10;            , Toast.LENGTH_SHORT).show();&#10;}" description="Browse a website" toReformat="true" toShortenFQNames="true">
+  <variable name="url" expression="" defaultValue="&quot;https://google.com&quot;" alwaysStopAt="true" />
+  <variable name="error" expression="" defaultValue="&quot;Web browser is not supported on this device&quot;" alwaysStopAt="true" />
   <context>
     <option name="JAVA_DECLARATION" value="true" />
     <option name="JAVA_STATEMENT" value="true" />

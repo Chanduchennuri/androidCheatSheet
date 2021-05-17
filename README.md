@@ -73,6 +73,11 @@ sudo ubuntu-drivers autoinstall
 - *`overridePendingTransition(R.anim.trans_left_in, R.anim.trans_left_out)`* : swipe left to new activity, run after triggering activity
 - *`overridePendingTransition(R.anim.trans_right_in, R.anim.trans_right_out)`* : swipe right to previous activity, run after triggering activity
 
+## Intent
+- `call` : dial a phone number
+- `sms` : compose a SMS message to a phone number
+- `web` : browse a website
+
 ## Toast
 - `toast` : make new toast
 - *`toast.setGravity(Gravity.CENTER | Gravity.TOP, 0, 0)`* : change toast position
