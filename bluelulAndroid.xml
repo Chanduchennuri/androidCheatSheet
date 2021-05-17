@@ -60,8 +60,7 @@
     <option name="JAVA_STATEMENT" value="true" />
   </context>
 </template>
-<template name="swact" value="Intent intent = new Intent($MainActivity$.this, $NextActivity$.class);&#10;intent.putExtra(&quot;$argStr$&quot;, &quot;$valStr$&quot;);&#10;startActivity(intent);" description="Call another activity from current activity" toReformat="true" toShortenFQNames="true">
-  <variable name="MainActivity" expression="className()" defaultValue="" alwaysStopAt="false" />
+<template name="swact" value="Intent intent = new Intent(this, $NextActivity$.class);&#10;intent.putExtra(&quot;$argStr$&quot;, &quot;$valStr$&quot;);&#10;startActivity(intent);" description="Call another activity from current activity" toReformat="true" toShortenFQNames="true">
   <variable name="NextActivity" expression="" defaultValue="&quot;NextActivity&quot;" alwaysStopAt="true" />
   <variable name="argStr" expression="" defaultValue="&quot;argStr&quot;" alwaysStopAt="true" />
   <variable name="valStr" expression="" defaultValue="&quot;valStr&quot;" alwaysStopAt="true" />
@@ -80,8 +79,7 @@
     <option name="JAVA_STATEMENT" value="true" />
   </context>
 </template>
-<template name="toast" value="Toast.makeText($MainActivity$.this, &quot;$content$&quot;, Toast.LENGTH_SHORT).show();" description="Make new toast" toReformat="true" toShortenFQNames="true">
-  <variable name="MainActivity" expression="className()" defaultValue="" alwaysStopAt="false" />
+<template name="toast" value="Toast.makeText(this, &quot;$content$&quot;, Toast.LENGTH_SHORT).show();" description="Make new toast" toReformat="true" toShortenFQNames="true">
   <variable name="content" expression="" defaultValue="&quot;content&quot;" alwaysStopAt="true" />
   <context>
     <option name="JAVA_DECLARATION" value="true" />
