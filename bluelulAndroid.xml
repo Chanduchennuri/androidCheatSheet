@@ -22,6 +22,26 @@
     <option name="JAVA_STATEMENT" value="true" />
   </context>
 </template>
+<template name="clipcopytext" value="ClipData clipData = ClipData.newPlainText(&quot;clipboard&quot;, &quot;$text$&quot;);&#10;clipMan.setPrimaryClip(clipData);" description="Copy plain text to clipboard" toReformat="true" toShortenFQNames="true">
+  <variable name="text" expression="" defaultValue="&quot;string to copy&quot;" alwaysStopAt="true" />
+  <context>
+    <option name="JAVA_DECLARATION" value="true" />
+    <option name="JAVA_STATEMENT" value="true" />
+  </context>
+</template>
+<template name="clipman" value="ClipboardManager clipMan = (ClipboardManager) this.getSystemService(Context.CLIPBOARD_SERVICE);" description="Declare ClipboardManager object" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="JAVA_DECLARATION" value="true" />
+    <option name="JAVA_STATEMENT" value="true" />
+  </context>
+</template>
+<template name="clippastetext" value="ClipData primaryClipData = clipMan.getPrimaryClip();&#10;String $paste$ = primaryClipData.getItemAt(0).getText().toString();" description="Paste plain text in clipboard" toReformat="true" toShortenFQNames="true">
+  <variable name="paste" expression="" defaultValue="&quot;pasteText&quot;" alwaysStopAt="true" />
+  <context>
+    <option name="JAVA_DECLARATION" value="true" />
+    <option name="JAVA_STATEMENT" value="true" />
+  </context>
+</template>
 <template name="const" value="public static final " description="public static final" toReformat="false" toShortenFQNames="true">
   <context>
     <option name="JAVA_DECLARATION" value="true" />

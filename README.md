@@ -78,6 +78,11 @@ sudo ubuntu-drivers autoinstall
 - `sms` : compose a SMS message to a phone number
 - `web` : browse a website
 
+## Clipboard
+- `clipman` : declare ClipboardManager object
+- `clipcopytext` : copy plain text to clipboard
+- `clippastetext` : paste plain text from clipboard
+
 ## Toast
 - `toast` : make new toast
 - *`toast.setGravity(Gravity.CENTER | Gravity.TOP, 0, 0)`* : change toast position
