@@ -77,6 +77,7 @@ sudo ubuntu-drivers autoinstall
 - `call` : dial a phone number
 - `sms` : compose a SMS message to a phone number
 - `web` : browse a website
+- `mail` : compose an email
 
 ## Clipboard
 - `clipman` : declare ClipboardManager object
