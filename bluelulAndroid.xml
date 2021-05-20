@@ -22,6 +22,13 @@
     <option name="JAVA_STATEMENT" value="true" />
   </context>
 </template>
+<template name="clipcopyintent" value="ClipData clipData = ClipData.newIntent(&quot;clipboard&quot;, $intent$);&#10;clipMan.setPrimaryClip(clipData);" description="Copy intent to clipboard" toReformat="true" toShortenFQNames="true">
+  <variable name="intent" expression="" defaultValue="&quot;intent&quot;" alwaysStopAt="true" />
+  <context>
+    <option name="JAVA_DECLARATION" value="true" />
+    <option name="JAVA_STATEMENT" value="true" />
+  </context>
+</template>
 <template name="clipcopytext" value="ClipData clipData = ClipData.newPlainText(&quot;clipboard&quot;, &quot;$text$&quot;);&#10;clipMan.setPrimaryClip(clipData);" description="Copy plain text to clipboard" toReformat="true" toShortenFQNames="true">
   <variable name="text" expression="" defaultValue="&quot;string to copy&quot;" alwaysStopAt="true" />
   <context>
@@ -35,8 +42,13 @@
     <option name="JAVA_STATEMENT" value="true" />
   </context>
 </template>
-<template name="clippastetext" value="ClipData primaryClipData = clipMan.getPrimaryClip();&#10;String $paste$ = primaryClipData.getItemAt(0).getText().toString();" description="Paste plain text in clipboard" toReformat="true" toShortenFQNames="true">
-  <variable name="paste" expression="" defaultValue="&quot;pasteText&quot;" alwaysStopAt="true" />
+<template name="clippasteintent" value="ClipData primaryClipData = clipMan.getPrimaryClip();&#10;Intent intentPaste = primaryClipData.getItemAt(0).getIntent();&#10;if (intentPaste != null) {&#10;    if (intentPaste.resolveActivity(getPackageManager()) != null) {&#10;        startActivity(intentPaste);&#10;    } else {&#10;        Toast.makeText(this&#10;                , &quot;The action stored in clipboard is not supported on this device&quot;&#10;                , Toast.LENGTH_SHORT).show();&#10;    }&#10;} else {&#10;    Toast.makeText(this, &quot;No action intent stored in clipboard&quot;&#10;            , Toast.LENGTH_SHORT).show();&#10;}" description="Paste and run intent in clipboard" toReformat="true" toShortenFQNames="true">
+  <context>
+    <option name="JAVA_DECLARATION" value="true" />
+    <option name="JAVA_STATEMENT" value="true" />
+  </context>
+</template>
+<template name="clippastetext" value="ClipData primaryClipData = clipMan.getPrimaryClip();&#10;CharSequence charPaste = primaryClipData.getItemAt(0).getText();&#10;if (charPaste != null) {&#10;    String textPaste = charPaste.toString();&#10;} else {&#10;    Toast.makeText(this, &quot;No text stored in clipboard&quot;&#10;            , Toast.LENGTH_SHORT).show();&#10;}" description="Paste plain text in clipboard" toReformat="true" toShortenFQNames="true">
   <context>
     <option name="JAVA_DECLARATION" value="true" />
     <option name="JAVA_STATEMENT" value="true" />

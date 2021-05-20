@@ -83,6 +83,8 @@ sudo ubuntu-drivers autoinstall
 - `clipman` : declare ClipboardManager object
 - `clipcopytext` : copy plain text to clipboard
 - `clippastetext` : paste plain text from clipboard
+- `clipcopyintent` : copy intent to clipboard
+- `clippasteintent` : paste intent from clipboard and run intent
 
 ## Toast
 - `toast` : make new toast
