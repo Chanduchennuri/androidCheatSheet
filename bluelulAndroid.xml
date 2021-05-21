@@ -29,6 +29,13 @@
     <option name="JAVA_STATEMENT" value="true" />
   </context>
 </template>
+<template name="clipcopyrawuri" value="ClipData clipData = ClipData.newRawUri(&quot;clipboard&quot;, $uri$);&#10;clipMan.setPrimaryClip(clipData);" description="Copy raw URI to clipboard" toReformat="true" toShortenFQNames="true">
+  <variable name="uri" expression="" defaultValue="&quot;uri&quot;" alwaysStopAt="true" />
+  <context>
+    <option name="JAVA_DECLARATION" value="true" />
+    <option name="JAVA_STATEMENT" value="true" />
+  </context>
+</template>
 <template name="clipcopytext" value="ClipData clipData = ClipData.newPlainText(&quot;clipboard&quot;, &quot;$text$&quot;);&#10;clipMan.setPrimaryClip(clipData);" description="Copy plain text to clipboard" toReformat="true" toShortenFQNames="true">
   <variable name="text" expression="" defaultValue="&quot;string to copy&quot;" alwaysStopAt="true" />
   <context>
@@ -48,7 +55,15 @@
     <option name="JAVA_STATEMENT" value="true" />
   </context>
 </template>
-<template name="clippastetext" value="ClipData primaryClipData = clipMan.getPrimaryClip();&#10;CharSequence charPaste = primaryClipData.getItemAt(0).getText();&#10;if (charPaste != null) {&#10;    String textPaste = charPaste.toString();&#10;} else {&#10;    Toast.makeText(this, &quot;No text stored in clipboard&quot;&#10;            , Toast.LENGTH_SHORT).show();&#10;}" description="Paste plain text in clipboard" toReformat="true" toShortenFQNames="true">
+<template name="clippastetext" value="ClipData primaryClipData = clipMan.getPrimaryClip();&#10;CharSequence charPaste = primaryClipData.getItemAt(0).getText();&#10;if (charPaste != null) {&#10;    String textPaste = charPaste.toString();$dosomething$&#10;} else {&#10;    Toast.makeText(this, &quot;No text stored in clipboard&quot;&#10;            , Toast.LENGTH_SHORT).show();&#10;}" description="Paste plain text in clipboard" toReformat="true" toShortenFQNames="true">
+  <variable name="dosomething" expression="" defaultValue="" alwaysStopAt="true" />
+  <context>
+    <option name="JAVA_DECLARATION" value="true" />
+    <option name="JAVA_STATEMENT" value="true" />
+  </context>
+</template>
+<template name="clippasteuri" value="ClipData primaryClipData = clipMan.getPrimaryClip();&#10;Uri uriPaste = primaryClipData.getItemAt(0).getUri();&#10;if (uriPaste != null) {&#10;    $dosomething$&#10;} else {&#10;    Toast.makeText(this, &quot;No URI stored in clipboard&quot;&#10;            , Toast.LENGTH_SHORT).show();&#10;}" description="Paste URI in clipboard" toReformat="true" toShortenFQNames="true">
+  <variable name="dosomething" expression="" defaultValue="" alwaysStopAt="true" />
   <context>
     <option name="JAVA_DECLARATION" value="true" />
     <option name="JAVA_STATEMENT" value="true" />
