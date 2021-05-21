@@ -67,6 +67,9 @@ sudo ubuntu-drivers autoinstall
 - *`editText.setErrorEnabled(false)`* : hide error in TextInputLayout object
 - `textchangewatch` : handle text change event
 
+## Radio
+- *`radioGroup.getCheckedRadioButtonId()`* : return Resource ID of checked radio button (e.g. R.id.radioButton), return -1 if no button checked
+
 ## Activity
 - `swact` : switch to another activity
 - `loadintent` : load input argument of activity after being created
@@ -85,6 +88,8 @@ sudo ubuntu-drivers autoinstall
 - `clippastetext` : paste plain text from clipboard
 - `clipcopyintent` : copy intent to clipboard
 - `clippasteintent` : paste intent from clipboard and run intent
+- `clipcopyrawuri` : copy raw uri to clipboard
+- `clippasteuri` : paste uri from clipboard
 
 ## URI
 - `res2uri` : parse URI from Resource ID
