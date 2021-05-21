@@ -1,4 +1,4 @@
-<template name="btnclick" value="$button$.setOnClickListener(new View.OnClickListener() {&#10;    @Override&#10;    public void onClick(View v) {&#10;        $action$&#10;    }&#10;});" description="Set OnClick Listener to button" toReformat="false" toShortenFQNames="true">
+<template name="btnclick" value="$button$.setOnClickListener(new View.OnClickListener() {&#10;    @Override&#10;    public void onClick(View v) {&#10;        $action$&#10;    }&#10;});" description="Set OnClick Listener to button" toReformat="true" toShortenFQNames="true">
   <variable name="button" expression="" defaultValue="&quot;button&quot;" alwaysStopAt="true" />
   <variable name="action" expression="" defaultValue="" alwaysStopAt="true" />
   <context>
@@ -36,7 +36,7 @@
     <option name="JAVA_STATEMENT" value="true" />
   </context>
 </template>
-<template name="clipman" value="ClipboardManager clipMan = (ClipboardManager) this.getSystemService(Context.CLIPBOARD_SERVICE);" description="Declare ClipboardManager object" toReformat="false" toShortenFQNames="true">
+<template name="clipman" value="ClipboardManager clipMan = (ClipboardManager) this.getSystemService(Context.CLIPBOARD_SERVICE);" description="Declare ClipboardManager object" toReformat="true" toShortenFQNames="true">
   <context>
     <option name="JAVA_DECLARATION" value="true" />
     <option name="JAVA_STATEMENT" value="true" />
@@ -54,7 +54,7 @@
     <option name="JAVA_STATEMENT" value="true" />
   </context>
 </template>
-<template name="const" value="public static final " description="public static final" toReformat="false" toShortenFQNames="true">
+<template name="const" value="public static final " description="public static final" toReformat="true" toShortenFQNames="true">
   <context>
     <option name="JAVA_DECLARATION" value="true" />
     <option name="JAVA_STATEMENT" value="true" />
