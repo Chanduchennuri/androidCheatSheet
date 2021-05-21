@@ -86,6 +86,9 @@ sudo ubuntu-drivers autoinstall
 - `clipcopyintent` : copy intent to clipboard
 - `clippasteintent` : paste intent from clipboard and run intent
 
+## URI
+- `res2uri` : parse URI from Resource ID
+
 ## Toast
 - `toast` : make new toast
 - *`toast.setGravity(Gravity.CENTER | Gravity.TOP, 0, 0)`* : change toast position

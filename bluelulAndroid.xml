@@ -94,6 +94,15 @@
     <option name="JAVA_STATEMENT" value="true" />
   </context>
 </template>
+<template name="res2uri" value="int $resId$ = $realResId$; &#10;Uri $uri$ = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE +&#10;        &quot;://&quot; + getResources().getResourcePackageName($resId$)&#10;        + '/' + getResources().getResourceTypeName($resId$)&#10;        + '/' + getResources().getResourceEntryName($resId$));" description="Parse URI from Resource ID" toReformat="true" toShortenFQNames="true">
+  <variable name="resId" expression="" defaultValue="&quot;resId&quot;" alwaysStopAt="true" />
+  <variable name="realResId" expression="" defaultValue="&quot;R.drawable.ic_launcher_foreground&quot;" alwaysStopAt="true" />
+  <variable name="uri" expression="" defaultValue="&quot;resUri&quot;" alwaysStopAt="true" />
+  <context>
+    <option name="JAVA_DECLARATION" value="true" />
+    <option name="JAVA_STATEMENT" value="true" />
+  </context>
+</template>
 <template name="sms" value="Uri uri = Uri.parse(&quot;sms&quot; + &quot;to:&quot; + &quot;$phone$&quot;);&#10;Intent intentSms = new Intent(Intent.ACTION_SENDTO, uri);&#10;intentSms.putExtra(&quot;sms_body&quot;, &quot;$content$&quot;);&#10;if (intentSms.resolveActivity(getPackageManager()) != null) {&#10;    startActivity(intentSms);&#10;} else {&#10;    Toast.makeText(this, &quot;$error$&quot;&#10;            , Toast.LENGTH_SHORT).show();&#10;}" description="Compose SMS to a phone number" toReformat="true" toShortenFQNames="true">
   <variable name="phone" expression="" defaultValue="&quot;0123456789&quot;" alwaysStopAt="true" />
   <variable name="content" expression="" defaultValue="&quot;sms content&quot;" alwaysStopAt="true" />
