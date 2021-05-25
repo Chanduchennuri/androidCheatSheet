@@ -104,6 +104,13 @@ sudo ubuntu-drivers autoinstall
 
 <br>
 
+# Quickcode template
+Templates are stored in /quickcode folder
+- `double back to exit` : press back button 2 times to exit app
+- `floating action button expandable` : press the `(+)` fab to expand more fabs
+
+<br>
+
 # Concept
 ## Life Cycle of Activity
 **Create**  <br>
