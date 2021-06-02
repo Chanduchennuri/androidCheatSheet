@@ -108,7 +108,7 @@ sudo ubuntu-drivers autoinstall
 Templates are stored in /quickcode folder
 - `double back to exit` : press back button 2 times to exit app
 - `floating action button expandable` : press the `(+)` fab to expand more fabs
-
+- `listview simple` : make simple listview (only text, single choice, multiple choice)
 <br>
 
 # Concept
