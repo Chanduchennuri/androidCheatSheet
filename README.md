@@ -109,6 +109,7 @@ Templates are stored in /quickcode folder
 - `double back to exit` : press back button 2 times to exit app
 - `floating action button expandable` : press the `(+)` fab to expand more fabs
 - `listview simple` : make simple listview (only text, single choice, multiple choice)
+- `listview card` : make card listview (1 item contains: avatar image, main name text, sub name text)
 <br>
 
 # Concept
