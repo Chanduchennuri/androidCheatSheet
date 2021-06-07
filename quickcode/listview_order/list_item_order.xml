@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/avatarOrderView"
+        android:layout_width="145dp"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:padding="16dp"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout"
+        app:layout_constraintStart_toEndOf="@+id/avatarOrderView"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/nameOrderView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Margherita"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/descOrderView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Typical Neapolitan pizza, made with San Marzano tomatoes, mozzarella cheese, fresh basil, salt and extra-virgin olive oil" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:minHeight="10dp" />
+
+        <TextView
+            android:id="@+id/priceOrderView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:paddingBottom="16dp"
+            android:text="$ 5.00"
+            android:textColor="?attr/colorPrimaryVariant"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/removeOrderBtn"
+            android:layout_width="45dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:alpha="0"
+            android:focusable="false"
+            app:backgroundTint="#D1D1D1"
+            app:cornerRadius="100dp"
+            app:icon="@android:drawable/ic_menu_close_clear_cancel"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="25dp" />
+
+        <TextView
+            android:id="@+id/totalOrderView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:alpha="0"
+            android:text="55"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/addOrderBtn"
+            android:layout_width="45dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:focusable="false"
+            app:cornerRadius="100dp"
+            app:icon="@android:drawable/ic_input_add"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="25dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

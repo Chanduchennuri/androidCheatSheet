@@ -110,6 +110,7 @@ Templates are stored in /quickcode folder
 - `floating action button expandable` : press the `(+)` fab to expand more fabs
 - `listview simple` : make simple listview (only text, single choice, multiple choice)
 - `listview card` : make card listview (1 item contains: avatar image, main name text, sub name text)
+- `listview order` : make food order listview (1 food item contains: image, name, description, price, count number, add button, remove button (long press to empty all))
 <br>
 
 # Concept
