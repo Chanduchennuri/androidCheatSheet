@@ -161,7 +161,7 @@ public class OrderAdapter extends BaseAdapter implements Filterable {
     }
 
     private OrderAdapter(@NonNull Context context, @LayoutRes int resource,
-                        @NonNull List<Order> objects, boolean objsFromResources) {
+                         @NonNull List<Order> objects, boolean objsFromResources) {
         mContext = context;
         mInflater = LayoutInflater.from(context);
         mResource = mDropDownResource = resource;
@@ -486,15 +486,22 @@ public class OrderAdapter extends BaseAdapter implements Filterable {
         priceView.setText(priceTag);
         totalView.setText(String.valueOf(item.getTotal()));
         avatarView.setImageResource(item.getAvatarResId());
-
+        if (item.getTotal() == 0) {
+            removeButton.setVisibility(View.INVISIBLE);
+            totalView.setVisibility(View.INVISIBLE);
+        } else {
+            removeButton.setVisibility(View.VISIBLE);
+            totalView.setVisibility(View.VISIBLE);
+        }
+        
         addButton.setOnClickListener(v -> {
             int total = item.getTotal();
             if (total >= 0) {
                 item.setTotal(total + 1);
                 totalView.setText(String.valueOf(item.getTotal()));
                 if (total == 0) {
-                    removeButton.animate().alpha(1);
-                    totalView.animate().alpha(1);
+                    removeButton.setVisibility(View.VISIBLE);
+                    totalView.setVisibility(View.VISIBLE);
                 }
             }
         });
@@ -505,8 +512,8 @@ public class OrderAdapter extends BaseAdapter implements Filterable {
                 item.setTotal(total - 1);
                 totalView.setText(String.valueOf(item.getTotal()));
                 if (total == 1) {
-                    removeButton.animate().alpha(0);
-                    totalView.animate().alpha(0);
+                    removeButton.setVisibility(View.INVISIBLE);
+                    totalView.setVisibility(View.INVISIBLE);
                 }
             }
         });
@@ -514,8 +521,8 @@ public class OrderAdapter extends BaseAdapter implements Filterable {
         removeButton.setOnLongClickListener(v -> {
             item.setTotal(0);
             totalView.setText(String.valueOf(item.getTotal()));
-            removeButton.animate().alpha(0);
-            totalView.animate().alpha(0);
+            removeButton.setVisibility(View.INVISIBLE);
+            totalView.setVisibility(View.INVISIBLE);
             return true;
         });
 
