@@ -17,7 +17,6 @@
 ```
 sudo ubuntu-drivers autoinstall
 ```
-- Install 
 
 <br>
 
@@ -25,6 +24,12 @@ sudo ubuntu-drivers autoinstall
 ## Theme
 1. Open **File &rarr; Settings &rarr; Plugins** in Android Studio
 2. Install theme you want. Recommend: `One Dark Theme`, `Hiberbee Theme`, `Material Theme`
+
+<br>
+
+# Tweak
+## Keep Android Emulator always on top
+On active widow emulator, press `ALT + SPACE`, select `always on top`
 
 <br>
 
