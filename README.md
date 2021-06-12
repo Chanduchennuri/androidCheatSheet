@@ -109,6 +109,14 @@ On active widow emulator, press `ALT + SPACE`, select `always on top`
 
 <br>
 
+# Layout tweak
+- Fill white color to icon of layout component: `app:tint="@color/white"`
+- Round button: `app:cornerRadius="100dp"`
+- Only-contain-icon button: `app:iconGravity="textStart"` `app:iconPadding="0dp"`
+- List-item can't be click after contain buttons: add `android:focusable="false"` to all buttons and clickable components
+
+<br>
+
 # Quickcode template
 Templates are stored in /quickcode folder
 - `double back to exit` : press back button 2 times to exit app
