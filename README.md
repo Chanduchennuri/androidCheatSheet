@@ -81,6 +81,9 @@ On active widow emulator, press `ALT + SPACE`, select `always on top`
 - *`overridePendingTransition(R.anim.trans_left_in, R.anim.trans_left_out)`* : swipe left to new activity, run after triggering activity
 - *`overridePendingTransition(R.anim.trans_right_in, R.anim.trans_right_out)`* : swipe right to previous activity, run after triggering activity
 
+## Fragment
+- `fragreplace` : Replace fragment to frame layout
+- `fragadd` : Add (overlay) fragment to frame layout
 ## Intent
 - `call` : dial a phone number
 - `sms` : compose a SMS message to a phone number

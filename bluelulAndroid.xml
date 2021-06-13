@@ -91,6 +91,26 @@
     <option name="JAVA_STATEMENT" value="true" />
   </context>
 </template>
+<template name="fragadd" value="getSupportFragmentManager().beginTransaction()$reorder$&#10;        .add(R.id.$frameLayout$, new $Fragment$)$backstack$.commit();" description="Add fragment to frame layout" toReformat="true" toShortenFQNames="true">
+  <variable name="reorder" expression="" defaultValue="&quot;.setReorderingAllowed(true)&quot;" alwaysStopAt="true" />
+  <variable name="frameLayout" expression="" defaultValue="&quot;frameLayout&quot;" alwaysStopAt="true" />
+  <variable name="Fragment" expression="" defaultValue="&quot;BlankFragment()&quot;" alwaysStopAt="true" />
+  <variable name="backstack" expression="" defaultValue="&quot;.addToBackStack(null)&quot;" alwaysStopAt="true" />
+  <context>
+    <option name="JAVA_DECLARATION" value="true" />
+    <option name="JAVA_STATEMENT" value="true" />
+  </context>
+</template>
+<template name="fragreplace" value="getSupportFragmentManager().beginTransaction()$reorder$&#10;        .replace(R.id.$frameLayout$, new $Fragment$)$backstack$.commit();" description="Replace fragment to frame layout" toReformat="true" toShortenFQNames="true">
+  <variable name="reorder" expression="" defaultValue="&quot;.setReorderingAllowed(true)&quot;" alwaysStopAt="true" />
+  <variable name="frameLayout" expression="" defaultValue="&quot;frameLayout&quot;" alwaysStopAt="true" />
+  <variable name="Fragment" expression="" defaultValue="&quot;BlankFragment()&quot;" alwaysStopAt="true" />
+  <variable name="backstack" expression="" defaultValue="&quot;.addToBackStack(null)&quot;" alwaysStopAt="true" />
+  <context>
+    <option name="JAVA_DECLARATION" value="true" />
+    <option name="JAVA_STATEMENT" value="true" />
+  </context>
+</template>
 <template name="loadintent" value="Intent intent = getIntent();&#10;String $val$ = intent.getStringExtra(&quot;$arg$&quot;);" description="Load input argument of activity after being created" toReformat="true" toShortenFQNames="true">
   <variable name="val" expression="" defaultValue="&quot;val&quot;" alwaysStopAt="true" />
   <variable name="arg" expression="" defaultValue="&quot;arg&quot;" alwaysStopAt="true" />
