@@ -82,8 +82,10 @@ On active widow emulator, press `ALT + SPACE`, select `always on top`
 - *`overridePendingTransition(R.anim.trans_right_in, R.anim.trans_right_out)`* : swipe right to previous activity, run after triggering activity
 
 ## Fragment
+Note: layout-related code should be placed on `onViewCreated` method, and use `view.findViewById` instead of `this.findViewById`
 - `fragreplace` : Replace fragment to frame layout
 - `fragadd` : Add (overlay) fragment to frame layout
+
 ## Intent
 - `call` : dial a phone number
 - `sms` : compose a SMS message to a phone number
