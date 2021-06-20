@@ -127,6 +127,7 @@ Templates are stored in /quickcode folder
 - `listview simple` : make simple listview (only text, single choice, multiple choice)
 - `listview card` : make card listview (1 item contains: avatar image, main name text, sub name text)
 - `listview order` : make food order listview (1 food item contains: image, name, description, price, count number, add button, remove button (long press to empty all))
+- `landview linearlayout adapt` : re-arrange layout when phone orientation change between landscape (horizonal) and portrait (vertical) by changing orientation of linearlayouts
 <br>
 
 # Concept
