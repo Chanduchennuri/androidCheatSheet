@@ -147,3 +147,5 @@ Templates are stored in /quickcode folder
 |------------- hiding: `dive into Back Stack` , `Recent App pressed` , `Home pressed`, `new app fully cover` <br>
 **Destroy** <br>
 |------------- free all resources: `pop out of Back Stack` , `kill app` <br>
+
+![image info](./readmeResource/lifecycle.png)
