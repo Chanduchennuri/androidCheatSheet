@@ -119,6 +119,7 @@ Note: layout-related code should be placed on `onViewCreated` method, and use `v
 - Round button: `app:cornerRadius="100dp"`
 - Only-contain-icon button: `app:iconGravity="textStart"` `app:iconPadding="0dp"`
 - List-item can't be click after contain buttons: add `android:focusable="false"` to all buttons and clickable components
+- Hide spell check but keep autocomplete for EditText: `android:inputType="_current_input_type_|textPersonName"` 
 
 <br>
 
