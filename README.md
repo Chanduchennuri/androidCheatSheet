@@ -1,5 +1,5 @@
 # Android Cheat Sheet 
-### Editor: `bluelul`
+### Author: `bluelul.com`
 <br>
 
 # Install
