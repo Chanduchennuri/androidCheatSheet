@@ -30,6 +30,12 @@ sudo ubuntu-drivers autoinstall
 # Tweak
 ## Keep Android Emulator always on top
 On active widow emulator, press `ALT + SPACE`, select `always on top`
+## Logcat monitor tool (Ubuntu)
+- Colorize logcat:
+```bash
+sudo snap install logcat-colorize
+adb shell logcat | logcat-colorize
+```
 
 <br>
 
