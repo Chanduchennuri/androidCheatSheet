@@ -140,7 +140,8 @@ Templates are stored in /quickcode folder
 <br>
 
 # Concept
-## Life Cycle of Activity
+## Life Cycle
+### Activity 
 **Create**  <br>
 |------------- finish data binding, allocate resources <br>
 *Start* <br>
@@ -154,4 +155,13 @@ Templates are stored in /quickcode folder
 **Destroy** <br>
 |------------- free all resources: `pop out of Back Stack` , `kill app` <br>
 
-![image info](./readmeResource/lifecycle.png)
+### Activity vs Fragment
+<details>
+<summary> Simple Lifecycle </summary>
+<p align="center" width="100%"><img src="readmeResource/lifecycleSimple.png"></p>
+</details>
+
+<details>
+<summary> Full Lifecycle </summary>
+<p align="center" width="100%"><img src="readmeResource/lifecycleFull.png"></p>
+</details>
