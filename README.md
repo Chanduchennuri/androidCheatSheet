@@ -130,7 +130,7 @@ Note: layout-related code should be placed on `onViewCreated` method, and use `v
 <br>
 
 # Quickcode template
-Templates are stored in /quickcode folder
+Templates are stored in [/quickcode folder](quickcode)
 - `double back to exit` : press back button 2 times to exit app
 - `floating action button expandable` : press the `(+)` fab to expand more fabs
 - `listview simple` : make simple listview (only text, single choice, multiple choice)
@@ -186,9 +186,9 @@ Templates are stored in /quickcode folder
 ### How to elevate
 - Method 1: sign by public & private key (the easiest way)
     - Get platform.x509.pem (public key) and platform.pk8 (private key)
-        - For Android Emulator: download from [aosp-mirror](https://github.com/aosp-mirror/platform_build/tree/master/target/product/security), or get files directly from `/sign folder` in this repo
+        - For Android Emulator: download from [aosp-mirror](https://github.com/aosp-mirror/platform_build/tree/master/target/product/security), or get files directly from [/sign folder](sign) in this repo
         - For custom device: get files from `build/target/product/security/` in android source code folder
-    - Install `apksigner 0.9` with `apksigner_0.9-1_all.deb` file in `/sign folder`
+    - Install `apksigner 0.9` with `apksigner_0.9-1_all.deb` file in [/sign folder](sign) in this repo
     ```bash
     sudo apt install -y fastjar jarwrapper
 	sudo dpkg -i apksigner_0.9-1_all.deb
@@ -199,7 +199,7 @@ Templates are stored in /quickcode folder
     ```
 - Method 2: sign by keystore
     - Get platform.x509.pem (public key) and platform.pk8 (private key), as in Method 1
-    - Get keytool-importeypair from [github repo](https://github.com/getfatday/keytool-importkeypair/blob/master/keytool-importkeypair), or from `/sign folder` in this repo
+    - Get keytool-importeypair from [github repo](https://github.com/getfatday/keytool-importkeypair/blob/master/keytool-importkeypair), or from [/sign folder](sign) in this repo
     - Generate your keystore file 
     ```bash
     sudo chmod 777 keytool-importkeypair.sh
