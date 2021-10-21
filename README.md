@@ -17,6 +17,12 @@
 ```
 sudo ubuntu-drivers autoinstall
 ```
+- If you can not start Android Emulator, with error `/dev/kvm device permission denied`, then run these commands:
+```
+sudo apt install qemu-kvm
+sudo adduser $USER kvm
+sudo chown $USER /dev/kvm
+```
 
 <br>
 
