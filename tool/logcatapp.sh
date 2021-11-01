@@ -47,7 +47,8 @@ logcatf() {
     while true
     do
 	echo "[LOGCATAPP] Wait for device booting up... "
-	adb wait-for-device shell "while [[ -z $(getprop sys.boot_completed) ]]; do sleep 0.2; done;"
+	adb wait-for-device 
+	while [[ -z $(adb shell getprop sys.boot_completed) ]]; do sleep 0.2; done;
 	echo "[LOGCATAPP] Booting up DONE"
 
 	echo "[LOGCATAPP] Wait for $1 starting... "
