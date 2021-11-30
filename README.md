@@ -277,7 +277,7 @@ System app is stored in read-only `/system` location, lead to:
 ```bash
 cd ~/Android/Sdk/emulator
 ./emulator -list-avds
-./emulator -writable-system -avd Nexus_4_API_27_Android_8.1 -no-snapshot-load -qemu
+./emulator -writable-system -avd Nexus_4_API_27 -no-snapshot-load -qemu
 ```
 - Leverate permission to modify system:
 ```bash
