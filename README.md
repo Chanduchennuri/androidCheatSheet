@@ -42,7 +42,29 @@ On active widow emulator, press `ALT + SPACE`, select `always on top`
 sudo snap install logcat-colorize
 adb shell logcat | logcat-colorize
 ```
+## Colorize adb shell
+<details>
+<summary> Colorize adb shell </summary>  
+<p align="center" width="100%"><img src="readmeResource/colorizeAdbShell.png"></p>
 
+- Only supported for devices with [file-system writable](#writableEmu)
+- Copy all text below and paste in one shot to adb shell 
+
+```bash
+echo >> /system/etc/mkshrc
+echo -e "# Colorize: bluelul.com\nif (( USER_ID )); then PS1='$'; else PS1='#'; fi" >> /system/etc/mkshrc
+echo -e "PS4='[\$EPOCHREALTIME] '; PS1='\${|" >> /system/etc/mkshrc
+echo -e "local e=\$?" >> /system/etc/mkshrc
+echo -e "(( e )) && REPLY+=\"\033[01;31m\$e\033[00m|\"" >> /system/etc/mkshrc
+echo -e "return \$e" >> /system/etc/mkshrc
+echo -e "}\033[01;33m\$HOSTNAME\033[00m:\033[01;34m\${PWD:-?}\033[00m'\"\$PS1 \"" >> /system/etc/mkshrc
+echo >> /system/etc/mkshrc
+echo "alias ls='ls --color'" >> /system/etc/mkshrc
+echo "alias ll='ls -l --color'" >> /system/etc/mkshrc
+echo "alias lah='ls -lah --color'" >> /system/etc/mkshrc
+```
+- Exit adb shell (`Ctrl-D`) and access adb shell again to update changes
+</details>
 <br>
 
 # Code snippet / Live Template
